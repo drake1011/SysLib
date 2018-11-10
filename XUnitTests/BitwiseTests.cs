@@ -29,10 +29,10 @@ namespace SysLib.XUnitTests
         [Fact]
         public void Test_BE_Int64_Ext()
         {
-            var bytes = _hex64.HexToBytes();
+            var bytes = _hex64.ToBytes();
             var intResult = bytes.ToUlong(ByteOrder.BigEndian);
             var buffer = intResult.ToBytes(ByteOrder.BigEndian);
-            var hexResult = buffer.BytesToHex();
+            var hexResult = buffer.ToHex();
             Assert.Equal(_hex64, hexResult);
         }
 
@@ -50,10 +50,10 @@ namespace SysLib.XUnitTests
         [Fact]
         public void Test_BE_Int32_Ext()
         {
-            var bytes = _hex32.HexToBytes();
+            var bytes = _hex32.ToBytes();
             var intResult = bytes.ToUint(ByteOrder.BigEndian);
             var buffer = intResult.ToBytes(ByteOrder.BigEndian);
-            var hexResult = buffer.BytesToHex();
+            var hexResult = buffer.ToHex();
             Assert.Equal(_hex32, hexResult);
         }
 
@@ -71,10 +71,10 @@ namespace SysLib.XUnitTests
         [Fact]
         public void Test_LE_Int64_Ext()
         {
-            var bytes = _hex64.HexToBytes();
+            var bytes = _hex64.ToBytes();
             var intResult = bytes.ToUlong();
             var buffer = intResult.ToBytes();
-            var hexResult = buffer.BytesToHex();
+            var hexResult = buffer.ToHex();
             Assert.Equal(_hex64, hexResult);
         }
 
@@ -92,10 +92,10 @@ namespace SysLib.XUnitTests
         [Fact]
         public void Test_LE_Int32_Ext()
         {
-            var bytes = _hex32.HexToBytes();
+            var bytes = _hex32.ToBytes();
             var intResult = bytes.ToUint();
             var buffer = intResult.ToBytes();
-            var hexResult = buffer.BytesToHex();
+            var hexResult = buffer.ToHex();
             Assert.Equal(_hex32, hexResult);
         }
 
@@ -307,7 +307,7 @@ namespace SysLib.XUnitTests
         [Fact]
         public void Test_HexConvert_HexToBytes_Pass_Ext()
         {
-            var result = _hex32.HexToBytes();
+            var result = _hex32.ToBytes();
             Assert.Equal(_bytes32, result);
         }
 
@@ -327,7 +327,7 @@ namespace SysLib.XUnitTests
         [InlineData("FFFFFFFF0")]
         public void Test_HexConvert_HexToBytes_Fail_Ext(string hex)
         {
-            Assert.Throws<ArgumentException>(() => hex.HexToBytes());
+            Assert.Throws<ArgumentException>(() => hex.ToBytes());
         }
 
         [Fact]
@@ -340,7 +340,7 @@ namespace SysLib.XUnitTests
         [Fact]
         public void Test_HexConvert_BytesToHex_Pass_Ext()
         {
-            var result = _bytes32.BytesToHex();
+            var result = _bytes32.ToHex();
             Assert.Equal(_hex32, result);
         }
 

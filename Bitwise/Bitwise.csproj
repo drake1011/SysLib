@@ -2,7 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>SysLib.Bitwise</PackageId>
+    <Authors>Dmk</Authors>
+    <Company />
+    <Description>Package for manipulating Bytes</Description>
+    <PackageTags>byte hex bit bitwise</PackageTags>
+    <RepositoryUrl>https://github.com/drake-vcu/SysLib</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/drake-vcu/SysLib/tree/master/Bitwise</PackageProjectUrl>
+    <Copyright>Copyright 2018</Copyright>
+    <PackageLicenseUrl>https://github.com/drake-vcu/SysLib/blob/master/LICENSE</PackageLicenseUrl>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

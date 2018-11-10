@@ -69,7 +69,7 @@ namespace SysLib.Bitwise
         /// Determins if the input string contains only hexadecimal nibbles
         /// </summary>
         /// <param name="value">input string to check for hex</param>
-        /// <returns>bool</returns>
+        /// <returns>true if all characters in string are valid hex nibbles</returns>
         public static bool ContainsOnlyHexNibbles(string value) => value.All(HexNibbles.Contains);
     }
 }

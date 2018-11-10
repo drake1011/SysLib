@@ -37,6 +37,7 @@ namespace SysLib.Bitwise
         #region Endian Methods
 
         /// <summary>
+        /// A method to write a number into a byte array BigEndian.
         /// </summary>
         /// <param name="n">unsigned int to convert</param>
         /// <param name="bs">byte array buffer to write to</param>
@@ -50,6 +51,7 @@ namespace SysLib.Bitwise
         }
 
         /// <summary>
+        /// A method to write a number into a byte array BigEndian.
         /// </summary>
         /// <param name="n">unsigned int to convert</param>
         /// <param name="bs">byte array buffer to write to</param>
@@ -64,6 +66,7 @@ namespace SysLib.Bitwise
         }
 
         /// <summary>
+        /// A method to write a number from a byte array BigEndian.
         /// </summary>
         /// <param name="bs">byte array to convert</param>
         /// <returns>uint</returns>
@@ -78,6 +81,7 @@ namespace SysLib.Bitwise
         }
 
         /// <summary>
+        /// A method to write a number from a byte array BigEndian.
         /// </summary>
         /// <param name="bs">byte array to convert</param>
         /// <param name="off">offset of byte array</param>
@@ -93,6 +97,7 @@ namespace SysLib.Bitwise
         }
 
         /// <summary>
+        /// A method to write a number from a byte array BigEndian.
         /// </summary>
         /// <param name="bs">byte array to convert</param>
         /// <returns>ulong</returns>
@@ -105,6 +110,7 @@ namespace SysLib.Bitwise
         }
 
         /// <summary>
+        /// A method to write a number from a byte array BigEndian.
         /// </summary>
         /// <param name="bs">byte array to convert</param>
         /// <param name="off">offset of byte array</param>
@@ -118,6 +124,7 @@ namespace SysLib.Bitwise
         }
 
         /// <summary>
+        /// A method to write a number into a byte array BigEndian.
         /// </summary>
         /// <param name="n">unsigned long to convert</param>
         /// <param name="bs">byte array buffer to write to</param>
@@ -129,6 +136,7 @@ namespace SysLib.Bitwise
         }
 
         /// <summary>
+        /// A method to write a number into a byte array BigEndian.
         /// </summary>
         /// <param name="n">unsigned long to convert</param>
         /// <param name="bs">byte array buffer to write to</param>
@@ -141,6 +149,7 @@ namespace SysLib.Bitwise
         }
 
         /// <summary>
+        /// A method to write a number into a byte array LittleEndian.
         /// </summary>
         /// <param name="n">unsigned int to convert</param>
         /// <param name="bs">byte array buffer to write to</param>
@@ -154,7 +163,7 @@ namespace SysLib.Bitwise
         }
 
         /// <summary>
-        /// A method to write a uint into a byte array LittleEndian.
+        /// A method to write a number into a byte array LittleEndian.
         /// </summary>
         /// <param name="n">unsigned int to convert</param>
         /// <param name="bs">byte array buffer to write to</param>
@@ -169,6 +178,7 @@ namespace SysLib.Bitwise
         }
 
         /// <summary>
+        /// A method to write a number from a byte array LittleEndian.
         /// </summary>
         /// <param name="bs">byte array to convert</param>
         /// <returns>uint</returns>
@@ -183,6 +193,7 @@ namespace SysLib.Bitwise
         }
 
         /// <summary>
+        /// A method to write a number from a byte array LittleEndian.
         /// </summary>
         /// <param name="bs">byte array to convert</param>
         /// <param name="off">offset of byte array</param>
@@ -198,6 +209,7 @@ namespace SysLib.Bitwise
         }
 
         /// <summary>
+        /// A method to write a number from a byte array LittleEndian.
         /// </summary>
         /// <param name="bs">byte array to convert</param>
         /// <returns>ulong</returns>
@@ -210,6 +222,7 @@ namespace SysLib.Bitwise
         }
 
         /// <summary>
+        /// A method to write a number from a byte array LittleEndian.
         /// </summary>
         /// <param name="bs">byte array to convert</param>
         /// <param name="off">offset of byte array</param>
@@ -223,6 +236,7 @@ namespace SysLib.Bitwise
         }
 
         /// <summary>
+        /// A method to write a number into a byte array LittleEndian.
         /// </summary>
         /// <param name="n">unsigned long to convert</param>
         /// <param name="bs">byte array buffer to write to</param>
@@ -234,6 +248,7 @@ namespace SysLib.Bitwise
         }
 
         /// <summary>
+        /// A method to write a number into a byte array LittleEndian.
         /// </summary>
         /// <param name="n">unsigned long to convert</param>
         /// <param name="bs">byte array buffer to write to</param>
