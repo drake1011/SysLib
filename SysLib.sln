@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bitwise", "Bitwise\Bitwise.csproj", "{10E84BD1-78DD-43D2-800B-C960A68E6CF7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bitwise", "Bitwise\Bitwise.csproj", "{10E84BD1-78DD-43D2-800B-C960A68E6CF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTests", "XUnitTests\XUnitTests.csproj", "{7B2A8B0E-C146-48FA-99A5-7A2EFE61D145}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{10E84BD1-78DD-43D2-800B-C960A68E6CF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10E84BD1-78DD-43D2-800B-C960A68E6CF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10E84BD1-78DD-43D2-800B-C960A68E6CF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B2A8B0E-C146-48FA-99A5-7A2EFE61D145}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B2A8B0E-C146-48FA-99A5-7A2EFE61D145}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B2A8B0E-C146-48FA-99A5-7A2EFE61D145}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B2A8B0E-C146-48FA-99A5-7A2EFE61D145}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
