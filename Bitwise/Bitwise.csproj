@@ -13,6 +13,7 @@
     <Copyright>Copyright 2018</Copyright>
     <PackageLicenseUrl>https://github.com/drake-vcu/SysLib/blob/master/LICENSE</PackageLicenseUrl>
     <Version>1.0.1</Version>
+    <RootNamespace>SysLib.Bitwise</RootNamespace>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
