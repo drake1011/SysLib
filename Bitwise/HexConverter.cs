@@ -18,10 +18,16 @@ namespace SysLib.Bitwise
         /// <returns>byte array</returns>
         public static byte[] HexToBytes(string hex)
         {
+            if (hex == null)
+                throw new ArgumentNullException("Input string cannot be null");
+
             if (hex.Length % 2 != 0)
             {
                 throw new ArgumentException($"The binary key cannot have an odd number of digits: {hex}");
             }
+
+            if(!ContainsOnlyHexNibbles(hex))
+                throw new ArgumentException($"The hex string has invalid nibble(s)");
 
             var bytes = new byte[hex.Length / 2];
             var byteValue = string.Empty;
@@ -48,6 +54,9 @@ namespace SysLib.Bitwise
         /// <returns>hexadecimal string</returns>
         public static string BytesToHex(byte[] bytes)
         {
+            if (bytes == null)
+                throw new ArgumentNullException("Input array cannot be null");
+
             var hex = string.Empty;
             foreach (byte b in bytes)
             {
