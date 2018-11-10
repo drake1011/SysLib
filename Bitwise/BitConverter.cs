@@ -1,16 +1,10 @@
-﻿using System;
-using System.Globalization;
-using System.Linq;
-
-namespace SysLib.Bitwise
+﻿namespace SysLib.Bitwise
 {
     /// <summary>
     /// Class for manapulating bytes
     /// </summary>
-    public static class Bitwise
+    public static class BitConverter
     {
-        private const string _hexNibbles = "0123456789abcdefABCDEF";
-
         /// <summary>
         /// rotate integer
         /// </summary>
@@ -222,57 +216,5 @@ namespace SysLib.Bitwise
         }
 
         #endregion
-
-        /// <summary>
-        /// Converts an even digit hexadecimal string into a byte array
-        /// </summary>
-        /// <param name="hexString">input hexadecimal string</param>
-        /// <returns>byte array</returns>
-        public static byte[] ConvertHexStringToByteArray(string hexString)
-        {
-            if (hexString.Length % 2 != 0)
-            {
-                throw new ArgumentException($"The binary key cannot have an odd number of digits: {hexString}");
-            }
-
-            byte[] HexAsBytes = new byte[hexString.Length / 2];
-            string byteValue = string.Empty;
-            try
-            {
-                for (int index = 0; index < HexAsBytes.Length; index++)
-                {
-                    byteValue = hexString.Substring(index * 2, 2);
-                    HexAsBytes[index] = byte.Parse(byteValue, NumberStyles.HexNumber);
-                }
-            }
-            catch (FormatException fex)
-            {
-                throw new FormatException($"{fex.Message} Invalid Hex value: {byteValue}", fex);
-            }
-
-            return HexAsBytes;
-        }
-
-        /// <summary>
-        /// Converts the byte array into a hexadecimal string
-        /// </summary>
-        /// <param name="byteArray">input byte array</param>
-        /// <returns>hexadecimal string</returns>
-        public static string ConvertByteArrayToHexString(byte[] byteArray)
-        {
-            string sTemp = string.Empty;
-            foreach (byte b in byteArray)
-            {
-                sTemp += b.ToString("X2");
-            }
-            return sTemp;
-        }
-
-        /// <summary>
-        /// Determins if the input string contains only hexadecimal nibbles
-        /// </summary>
-        /// <param name="value">input string to check for hex</param>
-        /// <returns>bool</returns>
-        public static bool ContainsOnlyHexNibbles(string value) => value.All(_hexNibbles.Contains);
     }
 }
