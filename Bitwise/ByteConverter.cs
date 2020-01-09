@@ -261,5 +261,23 @@ namespace SysLib.Bitwise
         }
 
         #endregion
+
+        /// <summary>
+        /// Decodes byte array into ascii form, like in Hex editors
+        /// </summary>
+        /// <param name="bytes">input bytes</param>
+        /// <returns>ascii chars</returns>
+        public static string DecodeBytesToAscii(byte[] bytes)
+        {
+            if (bytes == null)
+                throw new ArgumentNullException("Input array cannot be null");
+
+            var ascii = string.Empty;
+            foreach (byte b in bytes)
+            {
+                ascii += Convert.ToChar(b);
+            }
+            return ascii;
+        }
     }
 }
