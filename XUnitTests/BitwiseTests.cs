@@ -387,5 +387,40 @@ namespace SysLib.XUnitTests
         {
             Assert.False(hex.HasValidHexChars());
         }
+
+        #region DecodeAscii
+
+        private const string _hex = "FFD8FFE04A464946";
+        private const string _ascii = "ÿØÿàJFIF";
+
+        [Fact]
+        public void Test_Decode_Bytes_Pass()
+        {
+            var bytes = HexConverter.HexToBytes(_hex);
+            var result = ByteConverter.DecodeBytesToAscii(bytes);
+            Assert.Equal(_ascii, result);
+        }
+
+        [Fact]
+        public void Test_Decode_Hex_Pass()
+        {
+            var result = HexConverter.DecodeHexToAscii(_hex);
+            Assert.Equal(_ascii, result);
+        }
+
+        [Fact]
+        public void Test_Decode_Bytes_Ext_Pass()
+        {
+            var bytes = HexConverter.HexToBytes(_hex);
+            Assert.Equal(_ascii, bytes.ToAscii());
+        }
+
+        [Fact]
+        public void Test_Decode_Hex_Ext_Pass()
+        {
+            Assert.Equal(_ascii, _hex.ToAscii());
+        }
+
+        #endregion
     }
 }
