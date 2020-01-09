@@ -71,5 +71,18 @@ namespace SysLib.Bitwise
         /// <param name="value">input string to check for hex</param>
         /// <returns>true if all characters in string are valid hex nibbles</returns>
         public static bool ContainsOnlyHexNibbles(string value) => value.All(HexNibbles.Contains);
+
+        /// <summary>
+        /// Decodes hex string into ascii form, like in Hex editors
+        /// </summary>
+        /// <param name="hex">input hex string</param>
+        /// <returns>ascii chars</returns>
+        public static string DecodeHexToAscii(string hex)
+        {
+            if (hex == null)
+                throw new ArgumentNullException("Input string cannot be null");
+
+            return ByteConverter.DecodeBytesToAscii(hex.ToBytes());
+        }
     }
 }
