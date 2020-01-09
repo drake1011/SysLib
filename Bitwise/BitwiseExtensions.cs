@@ -130,6 +130,16 @@
             return count;
         }
 
+        /// <summary>
+        /// Extension method ToAscii for decoding bytes
+        /// </summary>
+        /// <param name="bytes">bytes to be decoded to ascii</param>
+        /// <returns>returns decoded ascii string</returns>
+        public static string ToAscii(this byte[] bytes)
+        {
+            return ByteConverter.DecodeBytesToAscii(bytes);
+        }
+
         #endregion
 
         #region HexConverter
@@ -162,6 +172,16 @@
         public static bool HasValidHexChars(this string input)
         {
             return HexConverter.ContainsOnlyHexNibbles(input);
+        }
+
+        /// <summary>
+        /// Extension method ToAscii for decoding hex
+        /// </summary>
+        /// <param name="hex">hex string to be decoded to ascii</param>
+        /// <returns>returns decoded ascii string</returns>
+        public static string ToAscii(this string hex)
+        {
+            return HexConverter.DecodeHexToAscii(hex);
         }
 
         #endregion
